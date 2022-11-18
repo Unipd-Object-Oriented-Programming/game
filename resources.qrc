@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+    <file>assets/Beowulf.png</file>
+    <file>assets/Grendel.png</file>
+</qresource>
+</RCC>
