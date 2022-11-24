@@ -1,6 +1,7 @@
 #include "Info.h"
 #include <QVBoxLayout>
 #include <QString>
+#include "CharacterInfoVisitor.h"
 
 namespace Game {
 namespace View {
@@ -19,6 +20,10 @@ Info::Info(Character& character, QWidget* parent)
 
     strength_label = new QLabel();
     layout->addWidget(strength_label);
+
+    CharacterInfoVisitor visitor;
+    character.accept(visitor);
+    layout->addWidget(visitor.getWidget());
 }
 
 void Info::show() {

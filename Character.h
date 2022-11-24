@@ -2,6 +2,7 @@
 #define CHARACTER_H
 
 #include <string>
+#include "CharacterVisitorInterface.h"
 
 namespace Game {
 
@@ -30,6 +31,8 @@ class Character {
     void takeDamage(const unsigned int damage);
 
     virtual void attack(Character& target) = 0;
+
+    virtual void accept(CharacterVisitorInterface& visitor) = 0;
 };
 
 }
