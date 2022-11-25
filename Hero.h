@@ -19,6 +19,7 @@ class Hero: public Character {
     );
     unsigned int getWeaponDamage() const;
     virtual void attack(Character& target);
+    virtual void accept(CharacterVisitorInterface& visitor);
 };
 
 }

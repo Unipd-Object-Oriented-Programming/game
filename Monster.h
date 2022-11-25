@@ -19,6 +19,7 @@ class Monster: public Character {
     );
     unsigned int getArms() const;
     virtual void attack(Character& target);
+    virtual void accept(CharacterVisitorInterface& visitor);
 };
 
 }

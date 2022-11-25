@@ -22,4 +22,8 @@ void Hero::attack(Character& target) {
     target.takeDamage(damage);
 }
 
+void Hero::accept(CharacterVisitorInterface& visitor) {
+    visitor.visitHero(*this);
+}
+
 }

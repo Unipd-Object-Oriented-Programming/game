@@ -22,4 +22,8 @@ void Monster::attack(Character& target) {
     target.takeDamage(damage);
 }
 
+void Monster::accept(CharacterVisitorInterface& visitor) {
+    visitor.visitMonster(*this);
+}
+
 }
