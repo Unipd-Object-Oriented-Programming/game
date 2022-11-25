@@ -20,9 +20,5 @@ MonsterPanel::MonsterPanel(Game::Monster& monster, QWidget* parent)
     layout->addWidget(artwork);
 }
 
-void MonsterPanel::refresh() {
-    info->show();
-}
-
 }
 }

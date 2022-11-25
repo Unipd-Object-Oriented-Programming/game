@@ -4,11 +4,12 @@
 #include <QWidget>
 #include <QLabel>
 #include "../Character.h"
+#include "../CharacterObserverInterface.h"
 
 namespace Game {
 namespace View {
 
-class Info: public QWidget {
+class Info: public QWidget, public CharacterObserverInterface {
     Q_OBJECT
   private:
     Character& character;
@@ -19,6 +20,7 @@ class Info: public QWidget {
   public:
     Info(Character& character, QWidget* parent = 0);
     void show();
+    virtual void notify(Character& character);
 };
 
 }

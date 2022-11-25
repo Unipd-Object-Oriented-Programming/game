@@ -41,9 +41,5 @@ HeroPanel::HeroPanel(Game::Hero& hero, QWidget* parent)
     commands->addWidget(magic, 1, 1, 1, 1);
 }
 
-void HeroPanel::refresh() {
-    info->show();
-}
-
 }
 }

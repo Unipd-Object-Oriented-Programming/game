@@ -24,12 +24,18 @@ Info::Info(Character& character, QWidget* parent)
     CharacterInfoVisitor visitor;
     character.accept(visitor);
     layout->addWidget(visitor.getWidget());
+
+    character.registerObserver(this);
 }
 
 void Info::show() {
     name_label->setText(QString::fromStdString(character.getName()));
     hit_points_label->setText("HP: " + QString::number(character.getHitPoints()) + "/" + QString::number(character.getMaxHitPoints()));
     strength_label->setText("Strength: " + QString::number(character.getStrength()));
+}
+
+void Info::notify(Character& character) {
+    hit_points_label->setText("HP: " + QString::number(character.getHitPoints()) + "/" + QString::number(character.getMaxHitPoints()));
 }
 
 }

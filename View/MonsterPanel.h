@@ -17,7 +17,6 @@ class MonsterPanel: public QWidget {
   
   public:
     MonsterPanel(Game::Monster& monster, QWidget* parent = 0);
-    void refresh();
 };
 
 }

@@ -15,6 +15,6 @@ QT += widgets
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # Input
-HEADERS += Character.h Hero.h Monster.h CharacterVisitorInterface.h View/CharacterInfoVisitor.h View/Info.h View/HeroPanel.h View/MonsterPanel.h View/Battle.h View/MainWindow.h
+HEADERS += Character.h Hero.h Monster.h CharacterVisitorInterface.h CharacterObserverInterface.h View/CharacterInfoVisitor.h View/Info.h View/HeroPanel.h View/MonsterPanel.h View/Battle.h View/MainWindow.h
 SOURCES += Character.cpp Hero.cpp main.cpp Monster.cpp View/CharacterInfoVisitor.cpp View/Info.cpp View/HeroPanel.cpp View/MonsterPanel.cpp View/Battle.cpp View/MainWindow.cpp
 RESOURCES = resources.qrc

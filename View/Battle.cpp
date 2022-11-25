@@ -24,9 +24,7 @@ Battle::Battle(Game::Hero& hero, Game::Monster& monster, QWidget* parent)
 
 void Battle::playerAttacks() {
     hero.attack(monster);
-    monster_panel->refresh();
     monster.attack(hero);
-    hero_panel->refresh();
 }
 
 }

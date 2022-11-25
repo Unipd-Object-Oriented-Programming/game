@@ -17,7 +17,6 @@ class HeroPanel: public QWidget {
   
   public:
     HeroPanel(Game::Hero& hero, QWidget* parent = 0);
-    void refresh();
   
   signals:
     void attack();

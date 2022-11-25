@@ -2,7 +2,9 @@
 #define CHARACTER_H
 
 #include <string>
+#include <vector>
 #include "CharacterVisitorInterface.h"
+#include "CharacterObserverInterface.h"
 
 namespace Game {
 
@@ -12,6 +14,7 @@ class Character {
     unsigned int max_hit_points;
     unsigned int hit_points;
     int strength;
+    std::vector<CharacterObserverInterface*> observers;
 
   public:
     Character(
@@ -33,6 +36,8 @@ class Character {
     virtual void attack(Character& target) = 0;
 
     virtual void accept(CharacterVisitorInterface& visitor) = 0;
+
+    void registerObserver(CharacterObserverInterface* observer);
 };
 
 }

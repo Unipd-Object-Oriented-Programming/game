@@ -33,6 +33,13 @@ void Character::takeDamage(const unsigned int damage) {
     else {
         hit_points = hit_points - damage;
     }
+    for (auto observer = observers.begin(); observer != observers.end(); observer++) {
+        (*observer)->notify(*this);
+    }
+}
+
+void Character::registerObserver(CharacterObserverInterface* observer) {
+    observers.push_back(observer);
 }
 
 }
